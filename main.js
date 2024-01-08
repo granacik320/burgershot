@@ -61,8 +61,6 @@ gsap.to(".dot", {zoom: 8, scrollTrigger: {
 
 
 const options = document.querySelectorAll('.my-atropos');
-let title = document.querySelector('h3');
-let container = document.querySelector('.container');
 
 options.forEach(option => {
     const myAtropos = Atropos({

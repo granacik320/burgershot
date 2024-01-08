@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  height: 300vh;
+  background: #FEF7E5;
+}
+
+.bg {
+  position: fixed;
+  left: -200px;
+  top: -700px;
+  width: calc(100% + 400px);
+  z-index: -1;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100vw;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .gallery {
+  display: flex;
+}
+main .rot {
+  z-index: 2;
+  width: 100vw;
+  height: 100vw;
+}
+main .rot .box {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: #FEF7E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .rot .box img {
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+}
+main .rot .box .dot {
+  font-family: "Inter", sans-serif;
+  color: #FF9800;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #e3d2bd;
+  position: absolute;
+  text-align: center;
+}
+main .rot .options {
+  padding-top: 24px;
+  background: #FEF7E5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Inter", sans-serif;
+}
+main .rot .options h3 {
+  transform: translateX(-90px);
+  font-size: 2.4rem;
+  white-space: nowrap;
+  margin-top: 0;
+  transition: transform 0.7s;
+}
+main .rot .options .my-atropos {
+  width: 320px;
+  background: #ffffff;
+}
+main .rot .options .atropos-scale, main .rot .options .atropos-rotate, main .rot .options .atropos-inner, main .rot .options .container {
+  overflow: visible;
+  position: relative;
+}
+main .rot .options .container {
+  padding: 24px;
+}
+main .rot .options .container .old {
+  text-decoration: line-through;
+}
+main .rot .options .container .save {
+  padding: 5px 10px;
+  border-radius: 35px;
+  margin-left: 10px;
+  background: rgba(236, 0, 255, 0.12);
+}
+main .rot .options .container .price {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+main .rot .options .container.best {
+  border: 2px solid rgb(255, 14, 106);
+}
+main .rot .options .container.best .old {
+  text-decoration: line-through;
+}
+main .rot .options .container.best .save {
+  padding: 5px 10px;
+  border-radius: 35px;
+  margin-left: 10px;
+  background: rgb(255, 14, 106);
+}
+main .rot .options .container.best .price {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+main .rot .options .container:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  margin-left: -4em;
+  margin-top: -4em;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.3s;
+}
+main .rot .options .add-border.container:before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+main .rot .options footer {
+  margin-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+main .rot .options footer a {
+  text-decoration: none;
+  background: #DAE3EE;
+  font-weight: bold;
+  color: #2B3F56;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+}
+main .rot .options footer svg {
+  transform: translateY(3px);
+  margin-right: 0.2em;
+}
+main .rot .options footer .date {
+  color: #47586C;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.contact {
+  padding: 24px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  background: #FEF7E5;
+}
+.contact h4 {
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+}
+.contact h4 strong {
+  letter-spacing: 0px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+footer {
+  padding: 48px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  background: #FEF7E5;
+}
+
+@media only screen and (max-width: 1350px) {
+  .options {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .gallery .image img {
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

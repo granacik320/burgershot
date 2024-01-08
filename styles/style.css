@@ -199,6 +199,9 @@ footer {
   .gallery .image img {
     width: 150px;
   }
+  .bg {
+    top: -400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

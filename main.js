@@ -53,7 +53,7 @@ gsap.to(".arcText", {rotate: -360, scrollTrigger: {
         end: 'bottom',
         scrub: 0.5,
     }});
-gsap.to(".dot", {zoom: 8, scrollTrigger: {
+gsap.to(".dot", {scale: 8, scrollTrigger: {
         start: 'top',
         end: 'bottom',
         scrub: 0.5,
